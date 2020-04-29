@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.loggin-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+    padding: 30px 5px 0px 5px;
+    height: 365px;
+}
+
+.header-wrapper {
+    margin-bottom: 10px;
+}
+
+.close-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.card-content {
+    width: 300px;
+}
+
+.login-icon {
+    margin: 0 auto 0 auto;
+    color: #6f6f6f;
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.login-button {
+    width: 100%;
+}
