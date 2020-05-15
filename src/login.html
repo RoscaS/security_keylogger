@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="awesomeLoginPageForFree.css">
+</head>
+<body>
+
+
+<div class="container">
+  <section class="section">
+    
+    <div class="loggin-card-wrapper">
+      <div class="card">
+        
+        <header class="header-wrapper">
+          <div class="card-header-title">
+            <i class="far fa-user fa-3x login-icon"></i>
+            
+            
+            <button class="button is-danger is-small is-outlined close-button"
+                    onclick="myExitCallback()">
+              <span class="icon is-small">
+                <i class="fa fa-times"></i>
+              </span>
+            </button>
+            
+            
+          </div>
+        </header>
+        
+        
+        <div class="card-content">
+            
+            
+            
+            
+            <div id="login-element" class="field">
+              <div class="control has-icons-left has-icons-right">
+                
+                <input id="login-input"
+                       class="input"
+                       type="email"
+                       placeholder="Email">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                  
+                  <i id="login-check" class="fas fa-check is-hidden"></i>
+                  
+                </span>
+              </div>
+              <p id="login-message" class="help is-danger"></p>
+            </div>
+            
+            
+            
+            <div id="password-element" class="field">
+              <div class="control has-icons-left has-icons-right">
+                <input id="password-input"
+                       class="input"
+                       type="password"
+                       placeholder="Password">
+                <span class="icon is-small is-left">
+                  <i class="fas fa-lock"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    
+                    <i id="password-check" class="fas fa-check is-hidden"></i>
+                    
+                  </span>
+              </div>
+              <p id="password-message" class="help is-danger"></p>
+            </div>
+            
+            
+            <div class="field buttons-wrapper">
+                <button class="button is-outlined is-link login-button"
+                        onclick="mySubmitCallback()">
+                  Login
+                </button>
+            </div>
+            
+            
+      
+        </div>
+      </div>
+      
+    </div>
+  </section>
+</div>
+
+
+<script src="awesomeLoginPageForFree.js"></script>
+<script>
+  
+  const loginField = new Field('login', [Rules.req, Rules.email]);
+  const passwordField = new Field('password', [Rules.req, Rules.short]);
+  const form = new Form([loginField, passwordField]);
+
+  function mySubmitCallback() {
+    // Just add your code here:
+    let credentials = form.submit();
+    if (credentials) {
+      console.log(credentials);
+    }
+  }
+  
+  function myExitCallback() {
+    // Just add your code here:
+    console.log("Exit")
+  }
+
+</script>
+</body>
+</html>
